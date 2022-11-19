@@ -13,7 +13,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18.x
-      - name: Install
+      - name: Install deps
         run: npm ci
-      - name: Run Linter
-        run: npm run lint
+      - name: build
+        run: npm run build
+      - name: Run lhci
+        run: npx lhci autorun
